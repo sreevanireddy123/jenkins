@@ -1,0 +1,160 @@
+
+//Java install
+sudo amazon-linux-extras install corretto
+yum install java-devel
+
+To choose the specific java
+alternatives --config java
+
+//jenkins
+jdk11 = 
+sudo yum update –y
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+	
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+sudo yum upgrade
+
+**sudo dnf install java-11-amazon-corretto -y
+
+yum install java 
+
+sudo yum install jenkins -y
+
+sudo systemctl enable jenkins
+
+sudo systemctl start jenkins
+
+sudo systemctl status jenkins
+
+
+
+//git install //
+
+yum install git 
+
+
+
+//maven install//
+
+https://docs.aws.amazon.com/neptune/latest/userguide/iam-auth-connect-prerq.html
+
+or 
+
+
+wget https://downloads.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
+
+sudo tar -zxvf apache-maven-3.8.8-bin.tar.gz -C /opt/
+
+sudo mv /opt/apache-maven-3.8.8 /opt/maven
+
+export M2_HOME=/opt/maven
+
+export PATH=$PATH:$M2_HOME/bin
+
+echo 'export M2_HOME=/opt/maven' >> ~/.bash_profile
+
+echo 'export PATH=$PATH:$M2_HOME/bin' >> ~/.bash_profile
+
+source ~/.bash_profile
+
+mvn -version
+
+
+/
+//sonar///(master/node) https://www.coachdevops.com/2021/06/jenkins-build-agent-setup-how-to-setup.htmlnote ref link ()
+
+
+///sonar app install///
+
+sudo yum install java-1.8.0 -y
+
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.6.zip
+
+sudo unzip sonarqube-7.6.zip -d /opt/sonar76
+
+groupadd sonar
+
+useradd -c "Sonar System User" -d /opt/sonar76 -g sonar -s /bin/bash sonar
+
+chown -R sonar:sonar /opt/sonar76
+
+cd /opt/sonar76/sonarqube-7.6/bin/linux-x86-64/
+
+sudo su sonar
+
+./sonar.sh start
+
+./sonar.sh status
+
+///tomcat///
+
+wget https://downloads.apache.org/tomcat/tomcat-10/v10.1.13/bin/apache-tomcat-10.1.13.tar.gz
+
+tar -xzvf apache-tomcat-10.1.13.tar.gz
+
+sudo mv apache-tomcat-10.1.13 /usr/local/tomcat10
+
+vi ~/.bashrc 
+
+export CATALINA_HOME=/usr/local/tomcat10
+export PATH=$PATH:$CATALINA_HOME/bin
+
+
+sudo /usr/local/tomcat10/bin/startup.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+ 
+	
+	
+
+
+
+
+
+
+
